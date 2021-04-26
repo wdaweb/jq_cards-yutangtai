@@ -7,7 +7,7 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  background: rgb(18, 18, 99);
+  background: rgb(22,35,67);
 }
 #game {
   width: 100%;
@@ -32,23 +32,30 @@ body {
 }
 #content #left{
   float: left;
-  width: 450px;
+  width: 500px;
   height: 100%;
   margin-left: 20px;
   background: seagreen;
 }
 #content #right{
   float: right;
-  width: 450px;
+  width: 500px;
   height: 100%;
   margin-right: 20px;
   background: skyblue;
 }
 #content #guess{
-  width: 200px;
+  width: 270px;
   height: 100%;
   margin: auto;
-  background: tomato;  
+}
+#guess img{
+  height: 150px;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 #content #intro{
   width: 800px;
@@ -70,6 +77,11 @@ body {
   float: right;
   width: 500px;
   height: 100%;
-  background: orchid;
   position: relative;
+}
+#logo img{
+  height: 200px;
+  width: auto;
+  position: absolute;
+  right: 10%;
 }
