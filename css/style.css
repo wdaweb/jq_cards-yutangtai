@@ -7,57 +7,57 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  background: rgb(22,35,67);
+  background: rgb(22, 35, 67);
 }
 #game {
   width: 100%;
   height: 100%;
 }
 /* header-------------------- */
-#header{
+#header {
   width: 100%;
   height: 20%;
   position: relative;
 }
-#header .ball{
+#header .ball {
   width: 900px;
   height: 100%;
   background: royalblue;
 }
 /* content-------------------- */
-#content{
+#content {
   width: 100%;
   height: 60%;
   position: relative;
 }
-#content #left{
+#content #left {
   float: left;
-  width: 500px;
+  width: 45%;
   height: 100%;
   margin-left: 20px;
   background: seagreen;
 }
-#content #right{
+#content #right {
   float: right;
-  width: 500px;
+  width: 45%;
   height: 100%;
   margin-right: 20px;
   background: skyblue;
 }
-#content #guess{
-  width: 270px;
+#content #guess {
+  width: 10%;
   height: 100%;
   margin: auto;
 }
-#guess img{
-  height: 150px;
+#guess img {
   width: auto;
+  height: 25%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-#content #intro{
+#content #intro {
   width: 800px;
   height: 120%;
   margin: auto;
@@ -65,29 +65,29 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   display: none;
 }
-.card{
+.card {
   height: 200px;
   width: auto;
   margin: 10px;
   position: relative;
 
   transform-style: preserve-3d;
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
-.left-card-front{
+.left-card-front {
   width: 100%;
   height: 100%;
-  background: url(/images/1_front.png)no-repeat;
+  background: url(./images/1_front.png) no-repeat;
   background-position: center;
   background-size: contain;
   position: absolute;
 
   transform: rotate(180deg);
 }
-.left-card-back{
+.left-card-back {
   width: 100%;
   height: 100%;
   /* background: url(/images/card_shadow_back.png)no-repeat; */
@@ -95,17 +95,17 @@ body {
   background-size: contain;
   position: absolute;
 }
-.right-card-front{
+.right-card-front {
   width: 100%;
   height: 100%;
-  background: url(/images/1_front.png)no-repeat;
+  background: url(./images/1_front.png) no-repeat;
   background-position: center;
   background-size: contain;
   position: absolute;
 
   transform: rotate(180deg);
 }
-.right-card-back{
+.right-card-back {
   width: 100%;
   height: 100%;
   /* background: url(/images/card_face_back.png)no-repeat; */
@@ -113,21 +113,21 @@ body {
   background-size: contain;
   position: absolute;
 }
-.card-open{
+.card-open {
   transform: rotateY(180deg);
 }
 /* footer--------------------- */
-#footer{  
+#footer {
   width: 100%;
   height: 20%;
 }
-#footer #logo{
+#footer #logo {
   float: right;
   width: 500px;
   height: 100%;
   position: relative;
 }
-#logo img{
+#logo img {
   height: 200px;
   width: auto;
   position: absolute;
