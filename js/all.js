@@ -33,12 +33,14 @@ function displayCard() {
   for (let i = 0; i < 6; i++) {
     // 左邊的牌堆
     $('#left').append(`
-            <div class="shadow card">
+            <div class="shadow">
                 <div class="left-card-front"></div>
                 <div class="left-card-back"></div>
             </div>
         `)
     $('.shadow').eq(i).find('.left-card-front').css('background-image', `url(./images/${randomIdNumber[i]}_shadow.png)`)
+    $('.shadow').eq(i).find('.left-card-front').css('background-repeat', `no-repeat`)
+
     $('.shadow').eq(i).attr('left-card', randomIdNumber[i])
     //打亂順序
     $('.shadow').eq(target1).insertAfter($('.shadow').eq(i))
@@ -46,12 +48,13 @@ function displayCard() {
 
     // 右邊的牌堆
     $('#right').append(`
-      <div class="face card">
-      <div class="right-card-front"></div>
-      <div class="right-card-back"></div>
+      <div class="face">
+        <div class="right-card-front"></div>
+        <div class="right-card-back"></div>
       </div>
       `)
     $('.face').eq(i).find('.right-card-front').css('background-image', `url(./images/${randomIdNumber[i]}_front.png)`)
+    $('.face').eq(i).find('.right-card-front').css('background-repeat', `no-repeat`)
     $('.face').eq(i).attr('right-card', randomIdNumber[i])
     //打亂順序
     $('.face').eq(target2).insertAfter($('.face').eq(i))
