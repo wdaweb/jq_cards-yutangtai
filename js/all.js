@@ -26,6 +26,8 @@ for (let i = 1; i <= 6; i++) {
 console.log(randomIdNumber)
 
 function displayCard() {
+  target1 = ranNum(0, 6)
+  target2 = ranNum(0, 6)
   if (target1 === target2) {
     target1 = ranNum(0, 6) //解決 target1 target2 重複的問題
   }
@@ -62,3 +64,41 @@ function displayCard() {
   }
 }
 displayCard()
+
+
+// 檢查
+function addCardOpen(){
+  $('#left').on('click', '.shadow', function(){
+    if($('#left .card-open').length === 0 && !$(this).hasClass('.card-open')){
+      $(this).addClass('card-open')
+    }
+    checkCard()
+  })
+  $('#right').on('click', '.face', function(){
+    if($('#right .card-open').length === 0 && !$(this).hasClass('.card-open')){
+      $(this).addClass('card-open')
+    }
+    checkCard()
+  })
+}
+addCardOpen()
+function checkCard(){
+  console.log($('#left .card-open').length, $('#right .card-open').length)
+  if(($('#left .card-open').length + $('#right .card-open').length) === 2){
+    if($('.card-open').eq(0).attr('left-card') === $('.card-open').eq(1).attr('right-card')){
+      $('.card-open').fadeTo(1000, 0, addBall).addClass('card-clear')
+    }
+    setTimeout(()=>{
+      $('.card-open').removeClass('card-open')
+    },1000)
+  }
+  if($('.card-clear').length === 12){
+    Swal.fire({
+      title:'恭喜成為神奇寶貝大師!!!'
+    })
+    $('#left').empty()
+    $('#right').empty()
+    displayCard()
+  }  
+}
+function addBall(){}
