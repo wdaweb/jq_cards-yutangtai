@@ -83,25 +83,32 @@ function checkCard() {
   if ($('#left .card-open').length + $('#right .card-open').length === 2) {
     if ($('.card-open').eq(0).attr('left-card') === $('.card-open').eq(1).attr('right-card')) {
       setTimeout(() => {
-        $('.card-open').fadeTo(1000, 0, addBall).addClass('card-clear')
+        $('.card-open').fadeTo(1000, 0).addClass('card-clear')
       }, 1000)
+      addBall()
     }
     setTimeout(() => {
       $('.card-open').removeClass('card-open')
     }, 1000)
   }
-  if ($('.card-clear').length === 12) {
-    Swal.fire({
-      title: '恭喜成為神奇寶貝大師!!!'
-    })
-    $('#left').empty()
-    $('#right').empty()
-    displayCard()
+  if ($('.pokeball').length === 6) {
+    setTimeout(() => {
+      Swal.fire({
+        title: '恭喜成為神奇寶貝大師!!!'
+      })
+      $('#left').empty()
+      $('#right').empty()
+      $('.ball').empty()
+      displayCard()
+    }, 2000)
   }
 }
 
 // 增加神奇寶貝球
 function addBall() {
-  console.log($('.ball'))
+  $('.ball').append(`
+    <div class="pokeball">
+      <img src="./images/ball.png">
+    </div>
+  `)
 }
-addBall()
