@@ -15,7 +15,7 @@ body {
 /* header-------------------- */
 #header {
   width: 100%;
-  height: 15%;
+  height: 11%;
   position: relative;
 }
 #header .ball {
@@ -28,7 +28,6 @@ body {
   display: inline-block;
   width: 100px;
   height: 100px;
-  background: lightcoral;
 
   position: relative;
 }
@@ -52,7 +51,7 @@ body {
   width: 550px;
   height: 100%;
   margin-left: 20px;
-  background: seagreen;
+  /* background: seagreen; */
 
   text-align: center;
 }
@@ -61,7 +60,7 @@ body {
   width: 550px;
   height: 100%;
   margin-right: 20px;
-  background: skyblue;
+  /* background: skyblue; */
 
   text-align: center;
 }
@@ -78,17 +77,145 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+/* intro-------------------- */
 #content #intro {
   width: 800px;
-  height: 120%;
+  height: 100%;
   margin: auto;
-  background: turquoise;
+  background: rgb(115, 121, 120);
+  border-radius: 10px;
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
+  /* display: none; */
 }
+.intro_bg {
+  width: 800px;
+  height: 100%;
+  margin: auto;
+  filter: blur(10px);
+  background: rgb(22, 35, 67);
+  border-radius: 10px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -99;
+  /* display: none; */
+}
+#intro .title_box {
+  width: 200px;
+  height: 150px;
+  background: orangered;
+  border-radius: 10px;
+  text-align: center;
+
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#intro h2 {
+  color: white;
+  font-size: 52px;
+  line-height: 75px;
+}
+#intro .ability_box {
+  width: 210px;
+  height: 290px;
+  background: cornflowerblue;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-radius: 10px;
+
+  position: absolute;
+  top: -5%;
+  left: -10%;
+}
+#intro .detail_box {
+  width: 400px;
+  height: 200px;
+  background: darkgray;
+  border-radius: 10px;
+
+  position: absolute;
+  top: 85%;
+  left: -10%;
+}
+#intro .chart_box {
+  width: 490px;
+  height: 190px;
+  background: darkgreen;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+
+  position: absolute;
+  top: 85%;
+  left: 55%;
+}
+#intro p {
+  color: white;
+  font-size: 22px;
+}
+#intro .pokemonImg {
+  width: 70%;
+  height: 70%;
+  /* background: darkmagenta; */
+
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pokemonImg .circle {
+  height: 89%;
+  width: auto;
+
+  position: absolute;
+  top: 5%;
+  left: 13%;
+
+  animation: circleRotate 20s linear infinite;
+}
+@keyframes circleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.pokemonImg .ring {
+  width: auto;
+  height: 100%;
+
+  animation: ringRotate 8s linear infinite;
+}
+@keyframes ringRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.pokemonImg .pokemon {
+  width: auto;
+  height: 80%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 牌堆------------------------ */
 .shadow {
   display: inline-block;
   height: 50%;
@@ -99,6 +226,10 @@ body {
   transform-style: preserve-3d;
   transition: transform 0.5s;
 }
+.shadow:hover {
+  transform: scale(1.1);
+  transform-origin: (0, 0);
+}
 .face {
   display: inline-block;
   height: 50%;
@@ -108,6 +239,10 @@ body {
 
   transform-style: preserve-3d;
   transition: transform 0.5s;
+}
+.face:hover {
+  transform: scale(1.1);
+  transform-origin: (0, 0);
 }
 .left-card-front {
   width: 100%;
@@ -157,7 +292,7 @@ body {
 /* footer--------------------- */
 #footer {
   width: 100%;
-  height: 15%;
+  height: 19%;
 }
 #footer #logo {
   float: right;
