@@ -85,6 +85,7 @@ function checkCard() {
       setTimeout(() => {
         $('.card-open').fadeTo(1000, 0).addClass('card-clear')
       }, 1000)
+      
       addBall()
     }
     setTimeout(() => {
@@ -114,3 +115,9 @@ function addBall() {
 }
 
 // 神奇寶貝介紹
+function descriptionBox(){
+  $('#intro').css('display','block')
+  console.log($('#intro').css('display'))
+  // $('pokeNum').css
+}
+descriptionBox()
