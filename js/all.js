@@ -23,7 +23,6 @@ for (let i = 1; i <= 6; i++) {
     i--
   }
 }
-console.log(randomIdNumber)
 
 function displayCard() {
   target1 = ranNum(0, 6)
@@ -31,7 +30,6 @@ function displayCard() {
   if (target1 === target2) {
     target1 = ranNum(0, 6) //解決 target1 target2 重複的問題
   }
-  console.log(target1, target2)
   for (let i = 0; i < 6; i++) {
     // 左邊的牌堆
     $('#left').append(`
@@ -44,7 +42,7 @@ function displayCard() {
     $('.shadow').eq(i).find('.left-card-front').css('background-repeat', `no-repeat`)
 
     $('.shadow').eq(i).attr('left-card', randomIdNumber[i])
-    //打亂順序
+    //打亂左邊牌堆的順序
     $('.shadow').eq(target1).insertAfter($('.shadow').eq(i))
     $('.shadow').eq(target2).insertBefore($('.shadow').eq(i))
 
@@ -58,47 +56,52 @@ function displayCard() {
     $('.face').eq(i).find('.right-card-front').css('background-image', `url(./images/${randomIdNumber[i]}_front.png)`)
     $('.face').eq(i).find('.right-card-front').css('background-repeat', `no-repeat`)
     $('.face').eq(i).attr('right-card', randomIdNumber[i])
-    //打亂順序
+    //打亂右邊牌堆的順序
     $('.face').eq(target2).insertAfter($('.face').eq(i))
     $('.face').eq(target1).insertBefore($('.face').eq(i))
   }
 }
 displayCard()
 
-
 // 檢查
-function addCardOpen(){
-  $('#left').on('click', '.shadow', function(){
-    if($('#left .card-open').length === 0 && !$(this).hasClass('.card-open')){
+function addCardOpen() {
+  $('#left').on('click', '.shadow', function () {
+    if ($('#left .card-open').length === 0 && !$(this).hasClass('.card-open')) {
       $(this).addClass('card-open')
     }
     checkCard()
   })
-  $('#right').on('click', '.face', function(){
-    if($('#right .card-open').length === 0 && !$(this).hasClass('.card-open')){
+  $('#right').on('click', '.face', function () {
+    if ($('#right .card-open').length === 0 && !$(this).hasClass('.card-open')) {
       $(this).addClass('card-open')
     }
     checkCard()
   })
 }
 addCardOpen()
-function checkCard(){
-  console.log($('#left .card-open').length, $('#right .card-open').length)
-  if(($('#left .card-open').length + $('#right .card-open').length) === 2){
-    if($('.card-open').eq(0).attr('left-card') === $('.card-open').eq(1).attr('right-card')){
-      $('.card-open').fadeTo(1000, 0, addBall).addClass('card-clear')
+function checkCard() {
+  if ($('#left .card-open').length + $('#right .card-open').length === 2) {
+    if ($('.card-open').eq(0).attr('left-card') === $('.card-open').eq(1).attr('right-card')) {
+      setTimeout(() => {
+        $('.card-open').fadeTo(1000, 0, addBall).addClass('card-clear')
+      }, 1000)
     }
-    setTimeout(()=>{
+    setTimeout(() => {
       $('.card-open').removeClass('card-open')
-    },1000)
+    }, 1000)
   }
-  if($('.card-clear').length === 12){
+  if ($('.card-clear').length === 12) {
     Swal.fire({
-      title:'恭喜成為神奇寶貝大師!!!'
+      title: '恭喜成為神奇寶貝大師!!!'
     })
     $('#left').empty()
     $('#right').empty()
     displayCard()
-  }  
+  }
 }
-function addBall(){}
+
+// 增加神奇寶貝球
+function addBall() {
+  console.log($('.ball'))
+}
+addBall()

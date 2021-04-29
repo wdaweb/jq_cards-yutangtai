@@ -71,7 +71,7 @@ body {
   transform: translate(-50%, -50%);
   display: none;
 }
-.shadow{
+.shadow {
   display: inline-block;
   height: 50%;
   width: 30%;
@@ -81,7 +81,7 @@ body {
   transform-style: preserve-3d;
   transition: transform 0.5s;
 }
-.face{
+.face {
   display: inline-block;
   height: 50%;
   width: 30%;
@@ -99,15 +99,18 @@ body {
   background-size: contain;
   position: absolute;
 
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 .left-card-back {
   width: 100%;
   height: 100%;
-  background: url(/images/card_shadow_back.png)no-repeat;
+  background: url(/images/card_shadow_back.png) no-repeat;
   background-position: center;
   background-size: contain;
   position: absolute;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .right-card-front {
   width: 100%;
@@ -117,15 +120,18 @@ body {
   background-size: contain;
   position: absolute;
 
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 .right-card-back {
   width: 100%;
   height: 100%;
-  background: url(/images/card_face_back.png)no-repeat;
+  background: url(/images/card_face_back.png) no-repeat;
   background-position: center;
   background-size: contain;
   position: absolute;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .card-open {
   transform: rotateY(180deg);
