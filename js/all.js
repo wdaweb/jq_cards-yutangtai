@@ -117,7 +117,6 @@ function addBall() {
 // 神奇寶貝介紹
 function descriptionBox(){
   $('#intro').css('display','block')
-  console.log($('#intro').css('display'))
   // $('pokeNum').css
 }
 descriptionBox()
