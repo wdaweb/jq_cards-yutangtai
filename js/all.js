@@ -3,6 +3,68 @@ let indexNum
 let randomIdNumber = []
 let target1 = ranNum(0, 6)
 let target2 = ranNum(0, 6)
+const pokemonInfo = [
+  {
+    name: '妙蛙種子',
+    id: 001,
+    attribution: ['草','毒'],
+    weakness: ['火','冰','飛行','超能力'],
+    detail:'經常可見牠在太陽下睡午覺的樣子。在沐浴了充足的陽光之後，牠背上的種子就會成長茁壯。',
+    ability:{
+      hp: 3,
+      attack: 3,
+      defend: 3,
+      specialAttack: 4,
+      specialDefend: 4,
+      speed: 3
+    }
+  },
+  {
+    name: '小火龍',
+    id: 004,
+    attribution: ['火'],
+    weakness: ['水','地面','岩石'],
+    detail:'天生喜歡熱熱的東西。據說當牠被雨淋濕的時候，尾巴的末端會冒出煙來。',
+    ability:{
+      hp: 3,
+      attack: 4,
+      defend: 3,
+      specialAttack: 4,
+      specialDefend: 3,
+      speed: 4
+    }
+  },
+  {
+    name: '傑尼龜',
+    id: 007,
+    attribution: ['水'],
+    weakness: ['草','電'],
+    detail:'甲殼的作用不僅是用來保護自己，圓潤的外形和表面的溝槽會減少水的阻力，使牠能夠快速地游泳。',
+    ability:{
+      hp: 3,
+      attack: 3,
+      defend: 4,
+      specialAttack: 3,
+      specialDefend: 4,
+      speed: 3
+    }
+  },
+  {
+    name: '綠毛蟲',
+    id: 010,
+    attribution: ['蟲'],
+    weakness: ['火','飛行','岩石'],
+    detail:'會從頭部的觸角釋放出強烈的氣味來趕走敵人，藉此保護自己。',
+    ability:{
+      hp: 3,
+      attack: 2,
+      defend: 3,
+      specialAttack: 2,
+      specialDefend: 2,
+      speed: 3
+    }
+  },
+]
 
 // 隨機數字
 function ranNum(min, max) {
