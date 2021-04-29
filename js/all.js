@@ -107,8 +107,10 @@ function checkCard() {
 // 增加神奇寶貝球
 function addBall() {
   $('.ball').append(`
-    <div class="pokeball">
-      <img src="./images/ball.png">
+    <div class="pokeball animate__animated animate__fadeInDownBig">
+      <a href=""><img src="./images/ball.png" title="hi"></a>
     </div>
   `)
 }
+
+// 神奇寶貝介紹
