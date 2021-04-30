@@ -6,11 +6,12 @@ let target2 = ranNum(0, 6)
 const pokemonInfo = [
   {
     name: '妙蛙種子',
-    id: 001,
-    attribution: ['草','毒'],
-    weakness: ['火','冰','飛行','超能力'],
-    detail:'經常可見牠在太陽下睡午覺的樣子。在沐浴了充足的陽光之後，牠背上的種子就會成長茁壯。',
-    ability:{
+    id: '001',
+    imgNum: 6,
+    attribution: ['草', '毒'],
+    weakness: ['火', '冰', '飛行', '超能力'],
+    detail: '經常可見牠在太陽下睡午覺的樣子。在沐浴了充足的陽光之後，牠背上的種子就會成長茁壯。',
+    ability: {
       hp: 3,
       attack: 3,
       defend: 3,
@@ -21,11 +22,12 @@ const pokemonInfo = [
   },
   {
     name: '小火龍',
-    id: 004,
+    id: '004',
+    imgNum: 2,
     attribution: ['火'],
-    weakness: ['水','地面','岩石'],
-    detail:'天生喜歡熱熱的東西。據說當牠被雨淋濕的時候，尾巴的末端會冒出煙來。',
-    ability:{
+    weakness: ['水', '地面', '岩石'],
+    detail: '天生喜歡熱熱的東西。據說當牠被雨淋濕的時候，尾巴的末端會冒出煙來。',
+    ability: {
       hp: 3,
       attack: 4,
       defend: 3,
@@ -36,11 +38,12 @@ const pokemonInfo = [
   },
   {
     name: '傑尼龜',
-    id: 007,
+    id: '007',
+    imgNum: 3,
     attribution: ['水'],
-    weakness: ['草','電'],
-    detail:'甲殼的作用不僅是用來保護自己，圓潤的外形和表面的溝槽會減少水的阻力，使牠能夠快速地游泳。',
-    ability:{
+    weakness: ['草', '電'],
+    detail: '甲殼的作用不僅是用來保護自己，圓潤的外形和表面的溝槽會減少水的阻力，使牠能夠快速地游泳。',
+    ability: {
       hp: 3,
       attack: 3,
       defend: 4,
@@ -51,11 +54,12 @@ const pokemonInfo = [
   },
   {
     name: '綠毛蟲',
-    id: 010,
+    id: '010',
+    imgNum: 4,
     attribution: ['蟲'],
-    weakness: ['火','飛行','岩石'],
-    detail:'會從頭部的觸角釋放出強烈的氣味來趕走敵人，藉此保護自己。',
-    ability:{
+    weakness: ['火', '飛行', '岩石'],
+    detail: '會從頭部的觸角釋放出強烈的氣味來趕走敵人，藉此保護自己。',
+    ability: {
       hp: 3,
       attack: 2,
       defend: 3,
@@ -64,6 +68,182 @@ const pokemonInfo = [
       speed: 3
     }
   },
+  {
+    name: '巴大蝶',
+    id: '012',
+    imgNum: 5,
+    attribution: ['蟲', '飛行'],
+    weakness: ['火', '飛行', '岩石', '電', '冰'],
+    detail: '當牠飛快地拍動翅膀，帶有劇毒的鱗粉就會隨著風向這裡飄過來。',
+    ability: {
+      hp: 4,
+      attack: 3,
+      defend: 3,
+      specialAttack: 6,
+      specialDefend: 5,
+      speed: 5
+    }
+  },
+  {
+    name: '波波',
+    id: '016',
+    imgNum: 5,
+    attribution: ['一般', '飛行'],
+    weakness: ['岩石', '電', '冰'],
+    detail: '因為方向感非常好，所以無論到了離巢穴多遠的地方，都能不迷路地飛回巢穴。',
+    ability: {
+      hp: 2,
+      attack: 2,
+      defend: 2,
+      specialAttack: 2,
+      specialDefend: 1,
+      speed: 3
+    }
+  },
+  {
+    name: '小拉達',
+    id: '019',
+    imgNum: 5,
+    attribution: ['一般'],
+    weakness: ['格鬥'],
+    detail: '門牙會終生生長，如果長得太長，就會因為無法進食而餓死。',
+    ability: {
+      hp: 2,
+      attack: 3,
+      defend: 2,
+      specialAttack: 1,
+      specialDefend: 1,
+      speed: 4
+    }
+  },
+  {
+    name: '阿柏蛇',
+    id: '023',
+    imgNum: 5,
+    attribution: ['毒'],
+    weakness: ['地面', '超能力'],
+    detail: '會藉由讓下顎脫臼來吞食比自己更大的獵物。進食之後會蜷縮起身子休息。',
+    ability: {
+      hp: 2,
+      attack: 3,
+      defend: 2,
+      specialAttack: 2,
+      specialDefend: 2,
+      speed: 3
+    }
+  },
+  {
+    name: '皮卡丘',
+    id: '025',
+    imgNum: 5,
+    attribution: ['電'],
+    weakness: ['地面'],
+    detail: '越是能製造出強大電流的皮卡丘，臉頰上的囊就越柔軟，同時也越有伸展性。',
+    ability: {
+      hp: 3,
+      attack: 4,
+      defend: 3,
+      specialAttack: 3,
+      specialDefend: 3,
+      speed: 6
+    }
+  },
+  {
+    name: '皮皮',
+    id: '035',
+    imgNum: 5,
+    attribution: ['妖精'],
+    weakness: ['毒', '鋼'],
+    detail: '據說如果在滿月的夜晚看見皮皮們聚在一起跳舞，就能得到幸福。',
+    ability: {
+      hp: 5,
+      attack: 3,
+      defend: 3,
+      specialAttack: 4,
+      specialDefend: 4,
+      speed: 3
+    }
+  },
+  {
+    name: '六尾',
+    id: '037',
+    imgNum: 5,
+    attribution: ['火'],
+    weakness: ['地面', '水', '岩石'],
+    detail: '雖然還是孩子，但已擁有美麗的６根尾巴。長大後尾巴會變得更多。',
+    ability: {
+      hp: 3,
+      attack: 3,
+      defend: 3,
+      specialAttack: 3,
+      specialDefend: 4,
+      speed: 4
+    }
+  },
+  {
+    name: '胖丁',
+    id: '039',
+    imgNum: 5,
+    attribution: ['一般', '妖精'],
+    weakness: ['毒', '鋼'],
+    detail: '在百貨公司的寢具區可以買到收錄著胖丁那奇妙搖籃曲的ＣＤ。',
+    ability: {
+      hp: 5,
+      attack: 2,
+      defend: 1,
+      specialAttack: 2,
+      specialDefend: 1,
+      speed: 1
+    }
+  },
+  {
+    name: '臭臭花',
+    id: '044',
+    imgNum: 5,
+    attribution: ['草', '毒'],
+    weakness: ['火', '冰', '飛行', '超能力'],
+    detail: '雌蕊會散發一種極其強烈的惡臭，能讓２公里外的人昏倒。',
+    ability: {
+      hp: 4,
+      attack: 4,
+      defend: 5,
+      specialAttack: 5,
+      specialDefend: 5,
+      speed: 3
+    }
+  },
+  {
+    name: '毛球',
+    id: '048',
+    imgNum: 5,
+    attribution: ['蟲', '毒'],
+    weakness: ['火', '飛行', '超能力', '岩石'],
+    detail: '據說為了保護自己，變得全身長滿了堅硬細小的體毛。有著不會放過任何小獵物的眼睛。',
+    ability: {
+      hp: 3,
+      attack: 3,
+      defend: 2,
+      specialAttack: 2,
+      specialDefend: 2,
+      speed: 3
+    }
+  },
+  {
+    name: '地鼠',
+    id: '050',
+    imgNum: 5,
+    attribution: ['地面'],
+    weakness: ['水', '', ''],
+    detail: '越是能製造出強大電流的皮卡丘，臉頰上的囊就越柔軟，同時也越有伸展性。',
+    ability: {
+      hp: 3,
+      attack: 4,
+      defend: 3,
+      specialAttack: 3,
+      specialDefend: 3,
+      speed: 6
+    }
+  }
 ]
 
 // 隨機數字
@@ -147,7 +327,7 @@ function checkCard() {
       setTimeout(() => {
         $('.card-open').fadeTo(1000, 0).addClass('card-clear')
       }, 1000)
-      
+
       addBall()
     }
     setTimeout(() => {
@@ -177,8 +357,8 @@ function addBall() {
 }
 
 // 神奇寶貝介紹
-function descriptionBox(){
-  $('#intro').css('display','block')
+function descriptionBox() {
+  $('#intro').css('display', 'block')
   // $('pokeNum').css
 }
 descriptionBox()
