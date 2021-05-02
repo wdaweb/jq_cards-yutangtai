@@ -1,0 +1,25 @@
+{
+  "type": "commonjs",
+  "name": "jq_cards-yutangtai",
+  "version": "1.0.0",
+  "description": "發揮創意美化你上課完成的小遊戲，並試著加入更多功能",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdaweb/jq_cards-yutangtai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wdaweb/jq_cards-yutangtai/issues"
+  },
+  "homepage": "https://github.com/wdaweb/jq_cards-yutangtai#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.6"
+  }
+}
