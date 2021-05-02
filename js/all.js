@@ -1,3 +1,4 @@
+
 let cardIdNumber = []
 let indexNum
 let randomIdNumber = []
@@ -5,6 +6,7 @@ let target1 = ranNum(0, 6)
 let target2 = ranNum(0, 6)
 const pokemonId = ["001", "004", "007", "010", "012", "016", "019", "024", "025", "035", "037", "039", "044", "048", "050", "052", "054", "079", "094", "103", "124", "129", "143", "151", "158", "202"]
 
+// const { Chart } = require("chart.js")
 // const axios = import('axios')
 // const cheerio = import('cheerio')
 const pokemonInfo = [
@@ -548,10 +550,11 @@ function findPokeIndex(){
   let pokeIndex = $('.card-open').eq(0).attr('left-card') - 1
   let attributesStr = ""
   let weaknessStr = ""
-  $('.pokeNum').text(pokemonInfo[pokeIndex].id)
+  $('.pokeNum').text(pokemonInfo[pokeIndex]['id'])
   $('.pokeName').text(pokemonInfo[pokeIndex].name)
   $('.detail').text(pokemonInfo[pokeIndex].detail)
   $('.pokemon').attr('src', `/images/${pokeIndex + 1}_info.png`)
+  abilityChart()
   for(let i=0; i<pokemonInfo[pokeIndex].attribution.length; i++){
     attributesStr += `${pokemonInfo[pokeIndex].attribution[i]}\n`
     $('.attributes').text(attributesStr)
@@ -566,7 +569,48 @@ function findPokeIndex(){
 function closeIntroBox(){
   $('.close_box').click(function(){
     $('#intro').css('display', 'none')
+    pokeChart.destroy();
   })
 }
 closeIntroBox()
+
+let pokeChart
+function abilityChart(){
+  let pokeIndex = $('.card-open').eq(0).attr('left-card') - 1
+  let ctx = $('#pokeChart')
+  pokeChart = new Chart(ctx,{
+    type: 'bar',
+    data: {
+      labels: ['HP', '攻擊', '防禦', '特攻', '特防', '速度'],
+      datasets: [{
+        label: '能力',
+        backgroundColor: [
+          'rgba(255, 255, 230, 0.5)',
+          'rgba(255, 230, 255, 0.5)',
+          'rgba(230, 255, 255, 0.5)'
+        ],
+        borderColor: [
+          'rgba(0, 0, 0, 0.5)'
+        ],
+        borderWidth: 1,
+        data: [
+          `${pokemonInfo[pokeIndex].ability.hp}`,
+          `${pokemonInfo[pokeIndex].ability.attack}`,
+          `${pokemonInfo[pokeIndex].ability.defend}`,
+          `${pokemonInfo[pokeIndex].ability.specialAttack}`,
+          `${pokemonInfo[pokeIndex].ability.specialDefend}`,
+          `${pokemonInfo[pokeIndex].ability.speed}`
+        ]
+      }]
+    },
+    options: {
+      elements: {
+        line: {
+          borderWidth: 10
+        }
+      }
+    }
+  })
+}
+
 // axios.get()
