@@ -20,6 +20,7 @@
   "homepage": "https://github.com/wdaweb/jq_cards-yutangtai#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "chart.js": "^3.2.1",
     "cheerio": "^1.0.0-rc.6",
     "webpack": "^5.36.2"
   }
