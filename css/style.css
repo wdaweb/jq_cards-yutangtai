@@ -76,6 +76,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: -1;
 }
 /* intro-------------------- */
 #content #intro {
@@ -105,6 +106,25 @@ body {
   transform: translate(-50%, -50%);
   z-index: -99;
   /* display: none; */
+}
+#intro .close_box {
+  width: 50px;
+  height: 50px;
+  background: crimson;
+  border-radius: 6px;
+
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 50px;
+
+  position: absolute;
+  right: 2%;
+  top: 2%;
+}
+#intro .close_box:hover {
+  background: cornflowerblue;
+  cursor: pointer;
 }
 #intro .title_box {
   width: 200px;
@@ -174,14 +194,18 @@ body {
   transform: translate(-50%, -50%);
 }
 .pokemonImg .circle {
+  display: inline-block;
   height: 89%;
   width: auto;
 
   position: absolute;
   top: 5%;
+  top: 50%;
   left: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  animation: circleRotate 20s linear infinite;
+  /* animation: circleRotate 20s linear infinite; */
 }
 @keyframes circleRotate {
   0% {
@@ -192,16 +216,23 @@ body {
   }
 }
 .pokemonImg .ring {
+  display: inline-block;
   width: auto;
   height: 100%;
 
-  animation: ringRotate 8s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* animation: ringRotate 8s linear infinite; */
 }
 @keyframes ringRotate {
   0% {
+    transform-origin: center;
     transform: rotate(0deg);
   }
   100% {
+    transform-origin: translateX(-100%);
     transform: rotate(360deg);
   }
 }
@@ -299,6 +330,8 @@ body {
   width: 500px;
   height: 100%;
   position: relative;
+
+  z-index: -1;
 }
 #logo img {
   height: 120px;
