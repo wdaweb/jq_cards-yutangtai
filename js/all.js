@@ -3,8 +3,10 @@ let indexNum
 let randomIdNumber = []
 let target1 = ranNum(0, 6)
 let target2 = ranNum(0, 6)
-const axios = require('axios')
-const cheerio = require('cheerio')
+const pokemonId = ["001", "004", "007", "010", "012", "016", "019", "024", "025", "035", "037", "039", "044", "048", "050", "052", "054", "079", "094", "103", "124", "129", "143", "151", "158"]
+
+// const axios = import('axios')
+// const cheerio = import('cheerio')
 const pokemonInfo = [
   {
     name: '妙蛙種子',
@@ -119,19 +121,19 @@ const pokemonInfo = [
     }
   },
   {
-    name: '阿柏蛇',
-    id: '023',
+    name: '阿柏怪',
+    id: '024',
     imgNum: 5,
     attribution: ['毒'],
     weakness: ['地面', '超能力'],
-    detail: '會藉由讓下顎脫臼來吞食比自己更大的獵物。進食之後會蜷縮起身子休息。',
+    detail: '最新的研究結果顯示，牠們肚子上的花紋有２０種以上的不同圖案。',
     ability: {
-      hp: 2,
-      attack: 3,
-      defend: 2,
-      specialAttack: 2,
-      specialDefend: 2,
-      speed: 3
+      hp: 3,
+      attack: 5,
+      defend: 3,
+      specialAttack: 3,
+      specialDefend: 3,
+      speed: 4
     }
   },
   {
@@ -298,48 +300,112 @@ const pokemonInfo = [
     name: '耿鬼',
     id: '094',
     imgNum: 5,
-    attribution: ['一般'],
-    weakness: ['格鬥'],
-    detail: '喜歡收集亮晶晶的東西。當牠心情好的時候，會讓訓練家一起欣賞自己的收藏。',
+    attribution: ['幽靈','電'],
+    weakness: ['地面','超能力','幽靈','惡'],
+    detail: '滿月的夜晚，如果影子自己動起來並露出笑容，那肯定是耿鬼搞的鬼。',
+    ability: {
+      hp: 4,
+      attack: 4,
+      defend: 4,
+      specialAttack: 8,
+      specialDefend: 5,
+      speed: 7
+    }
+  },
+  {
+    name: '椰蛋樹',
+    id: '103',
+    imgNum: 5,
+    attribution: ['草','超能力'],
+    weakness: ['火', '冰', '毒', '飛行', '蟲', '幽靈', '惡'],
+    detail: '會用精神力量迎戰敵人。３個頭會分別發出念力，所以威力也會變成３倍。',
+    ability: {
+      hp: 4,
+      attack: 5,
+      defend: 4,
+      specialAttack: 6,
+      specialDefend: 3,
+      speed: 3
+    }
+  },
+  {
+    name: '迷唇姐',
+    id: '124',
+    imgNum: 5,
+    attribution: ['冰','超能力'],
+    weakness: ['火','蟲','岩石','幽靈','惡','鋼'],
+    detail: '會以獨特的節奏扭動腰部。棲息在阿羅拉的迷唇姐動作更是特別完美無瑕。',
     ability: {
       hp: 3,
       attack: 3,
-      defend: 3,
-      specialAttack: 3,
-      specialDefend: 3,
+      defend: 2,
+      specialAttack: 6,
+      specialDefend: 4,
+      speed: 5
+    }
+  },
+  {
+    name: '鯉魚王',
+    id: '129',
+    imgNum: 5,
+    attribution: ['水'],
+    weakness: ['草','電'],
+    detail: '力量和速度都不太行。是世界上最弱最可憐的寶可夢。',
+    ability: {
+      hp: 2,
+      attack: 1,
+      defend: 4,
+      specialAttack: 1,
+      specialDefend: 2,
+      speed: 5
+    }
+  },
+  {
+    name: '卡比獸',
+    id: '143',
+    imgNum: 5,
+    attribution: ['一般'],
+    weakness: ['格鬥'],
+    detail: '每天不吃下４００公斤的食物絕不會善罷甘休。吃飽了就會開始睡覺。',
+    ability: {
+      hp: 10,
+      attack: 7,
+      defend: 4,
+      specialAttack: 4,
+      specialDefend: 7,
+      speed: 2
+    }
+  },
+  {
+    name: '夢幻',
+    id: '151',
+    imgNum: 5,
+    attribution: ['超能力'],
+    weakness: ['蟲', '幽靈', '惡'],
+    detail: '據說牠有著所有寶可夢的基因。因為可以隨心所欲地隱形，所以就算接近人類也完全不會被察覺。',
+    ability: {
+      hp: 6,
+      attack: 6,
+      defend: 6,
+      specialAttack: 6,
+      specialDefend: 6,
       speed: 6
     }
   },
   {
-    name: '喵喵',
-    id: '052',
+    name: '小鋸鱷',
+    id: '158',
     imgNum: 5,
-    attribution: ['一般'],
-    weakness: ['格鬥'],
-    detail: '喜歡收集亮晶晶的東西。當牠心情好的時候，會讓訓練家一起欣賞自己的收藏。',
+    attribution: ['水'],
+    weakness: ['草','電'],
+    detail: '個子雖小但雙顎力量很強。力量強大到小鋸鱷只是想輕輕咬一下，但卻會讓對方受到重傷的程度。',
     ability: {
-      hp: 3,
+      hp: 2,
       attack: 3,
       defend: 3,
-      specialAttack: 3,
-      specialDefend: 3,
-      speed: 6
-    }
-  },
-  {
-    name: '喵喵',
-    id: '052',
-    imgNum: 5,
-    attribution: ['一般'],
-    weakness: ['格鬥'],
-    detail: '喜歡收集亮晶晶的東西。當牠心情好的時候，會讓訓練家一起欣賞自己的收藏。',
-    ability: {
-      hp: 3,
-      attack: 3,
-      defend: 3,
-      specialAttack: 3,
-      specialDefend: 3,
-      speed: 6
+      specialAttack: 2,
+      specialDefend: 2,
+      speed: 2
     }
   },
 ]
@@ -461,5 +527,4 @@ function descriptionBox() {
 }
 descriptionBox()
 
-const pokemonId = ["001", "004", "007", "010", "012", "016", "019", "024", "025", "035", "037", "039", "044", "048", "050", "052", "054", "079", "094", "103", "124", "129", "143", "151", "158"]
-axios.get()
+// axios.get()
