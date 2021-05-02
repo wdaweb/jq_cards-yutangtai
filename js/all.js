@@ -3,7 +3,7 @@ let indexNum
 let randomIdNumber = []
 let target1 = ranNum(0, 6)
 let target2 = ranNum(0, 6)
-const pokemonId = ["001", "004", "007", "010", "012", "016", "019", "024", "025", "035", "037", "039", "044", "048", "050", "052", "054", "079", "094", "103", "124", "129", "143", "151", "158"]
+const pokemonId = ["001", "004", "007", "010", "012", "016", "019", "024", "025", "035", "037", "039", "044", "048", "050", "052", "054", "079", "094", "103", "124", "129", "143", "151", "158", "202"]
 
 // const axios = import('axios')
 // const cheerio = import('cheerio')
@@ -91,7 +91,7 @@ const pokemonInfo = [
   {
     name: '波波',
     id: '016',
-    imgNum: 5,
+    imgNum: 7,
     attribution: ['一般', '飛行'],
     weakness: ['岩石', '電', '冰'],
     detail: '因為方向感非常好，所以無論到了離巢穴多遠的地方，都能不迷路地飛回巢穴。',
@@ -107,7 +107,7 @@ const pokemonInfo = [
   {
     name: '小拉達',
     id: '019',
-    imgNum: 5,
+    imgNum: 8,
     attribution: ['一般'],
     weakness: ['格鬥'],
     detail: '門牙會終生生長，如果長得太長，就會因為無法進食而餓死。',
@@ -123,7 +123,7 @@ const pokemonInfo = [
   {
     name: '阿柏怪',
     id: '024',
-    imgNum: 5,
+    imgNum: 9,
     attribution: ['毒'],
     weakness: ['地面', '超能力'],
     detail: '最新的研究結果顯示，牠們肚子上的花紋有２０種以上的不同圖案。',
@@ -139,7 +139,7 @@ const pokemonInfo = [
   {
     name: '皮卡丘',
     id: '025',
-    imgNum: 5,
+    imgNum: 1,
     attribution: ['電'],
     weakness: ['地面'],
     detail: '越是能製造出強大電流的皮卡丘，臉頰上的囊就越柔軟，同時也越有伸展性。',
@@ -155,7 +155,7 @@ const pokemonInfo = [
   {
     name: '皮皮',
     id: '035',
-    imgNum: 5,
+    imgNum: 10,
     attribution: ['妖精'],
     weakness: ['毒', '鋼'],
     detail: '據說如果在滿月的夜晚看見皮皮們聚在一起跳舞，就能得到幸福。',
@@ -171,7 +171,7 @@ const pokemonInfo = [
   {
     name: '六尾',
     id: '037',
-    imgNum: 5,
+    imgNum: 12,
     attribution: ['火'],
     weakness: ['地面', '水', '岩石'],
     detail: '雖然還是孩子，但已擁有美麗的６根尾巴。長大後尾巴會變得更多。',
@@ -187,7 +187,7 @@ const pokemonInfo = [
   {
     name: '胖丁',
     id: '039',
-    imgNum: 5,
+    imgNum: 11,
     attribution: ['一般', '妖精'],
     weakness: ['毒', '鋼'],
     detail: '在百貨公司的寢具區可以買到收錄著胖丁那奇妙搖籃曲的ＣＤ。',
@@ -203,7 +203,7 @@ const pokemonInfo = [
   {
     name: '臭臭花',
     id: '044',
-    imgNum: 5,
+    imgNum: 13,
     attribution: ['草', '毒'],
     weakness: ['火', '冰', '飛行', '超能力'],
     detail: '雌蕊會散發一種極其強烈的惡臭，能讓２公里外的人昏倒。',
@@ -219,7 +219,7 @@ const pokemonInfo = [
   {
     name: '毛球',
     id: '048',
-    imgNum: 5,
+    imgNum: 14,
     attribution: ['蟲', '毒'],
     weakness: ['火', '飛行', '超能力', '岩石'],
     detail: '據說為了保護自己，變得全身長滿了堅硬細小的體毛。有著不會放過任何小獵物的眼睛。',
@@ -235,7 +235,7 @@ const pokemonInfo = [
   {
     name: '地鼠',
     id: '050',
-    imgNum: 5,
+    imgNum: 15,
     attribution: ['地面'],
     weakness: ['水', '草', '冰'],
     detail: '地鼠經過之後的土壤會得到適當的翻動，成為最適合耕種的田地。',
@@ -251,7 +251,7 @@ const pokemonInfo = [
   {
     name: '喵喵',
     id: '052',
-    imgNum: 5,
+    imgNum: 16,
     attribution: ['一般'],
     weakness: ['格鬥'],
     detail: '喜歡收集亮晶晶的東西。當牠心情好的時候，會讓訓練家一起欣賞自己的收藏。',
@@ -267,7 +267,7 @@ const pokemonInfo = [
   {
     name: '可達鴨',
     id: '054',
-    imgNum: 5,
+    imgNum: 17,
     attribution: ['水'],
     weakness: ['草','電'],
     detail: '一使出念力就會頭痛，所以平常盡量什麼事都不做，整天不停地發呆。',
@@ -283,7 +283,7 @@ const pokemonInfo = [
   {
     name: '呆呆獸',
     id: '079',
-    imgNum: 5,
+    imgNum: 18,
     attribution: ['水','超能力'],
     weakness: ['草','電','蟲','幽靈','惡'],
     detail: '傳說當呆呆獸打呵欠時就會開始下雨，所以據說有些地區會祭祀呆呆獸。',
@@ -299,7 +299,7 @@ const pokemonInfo = [
   {
     name: '耿鬼',
     id: '094',
-    imgNum: 5,
+    imgNum: 19,
     attribution: ['幽靈','電'],
     weakness: ['地面','超能力','幽靈','惡'],
     detail: '滿月的夜晚，如果影子自己動起來並露出笑容，那肯定是耿鬼搞的鬼。',
@@ -315,7 +315,7 @@ const pokemonInfo = [
   {
     name: '椰蛋樹',
     id: '103',
-    imgNum: 5,
+    imgNum: 20,
     attribution: ['草','超能力'],
     weakness: ['火', '冰', '毒', '飛行', '蟲', '幽靈', '惡'],
     detail: '會用精神力量迎戰敵人。３個頭會分別發出念力，所以威力也會變成３倍。',
@@ -331,7 +331,7 @@ const pokemonInfo = [
   {
     name: '迷唇姐',
     id: '124',
-    imgNum: 5,
+    imgNum: 22,
     attribution: ['冰','超能力'],
     weakness: ['火','蟲','岩石','幽靈','惡','鋼'],
     detail: '會以獨特的節奏扭動腰部。棲息在阿羅拉的迷唇姐動作更是特別完美無瑕。',
@@ -347,7 +347,7 @@ const pokemonInfo = [
   {
     name: '鯉魚王',
     id: '129',
-    imgNum: 5,
+    imgNum: 21,
     attribution: ['水'],
     weakness: ['草','電'],
     detail: '力量和速度都不太行。是世界上最弱最可憐的寶可夢。',
@@ -363,7 +363,7 @@ const pokemonInfo = [
   {
     name: '卡比獸',
     id: '143',
-    imgNum: 5,
+    imgNum: 23,
     attribution: ['一般'],
     weakness: ['格鬥'],
     detail: '每天不吃下４００公斤的食物絕不會善罷甘休。吃飽了就會開始睡覺。',
@@ -379,7 +379,7 @@ const pokemonInfo = [
   {
     name: '夢幻',
     id: '151',
-    imgNum: 5,
+    imgNum: 24,
     attribution: ['超能力'],
     weakness: ['蟲', '幽靈', '惡'],
     detail: '據說牠有著所有寶可夢的基因。因為可以隨心所欲地隱形，所以就算接近人類也完全不會被察覺。',
@@ -395,7 +395,7 @@ const pokemonInfo = [
   {
     name: '小鋸鱷',
     id: '158',
-    imgNum: 5,
+    imgNum: 26,
     attribution: ['水'],
     weakness: ['草','電'],
     detail: '個子雖小但雙顎力量很強。力量強大到小鋸鱷只是想輕輕咬一下，但卻會讓對方受到重傷的程度。',
@@ -405,6 +405,22 @@ const pokemonInfo = [
       defend: 3,
       specialAttack: 2,
       specialDefend: 2,
+      speed: 2
+    }
+  },
+  {
+    name: '果然翁',
+    id: '202',
+    imgNum: 25,
+    attribution: ['超能力'],
+    weakness: ['蟲','幽靈', '惡'],
+    detail: '討厭光和衝擊。受到攻擊時身體會膨脹，反擊也會因此變強。',
+    ability: {
+      hp: 12,
+      attack: 2,
+      defend: 4,
+      specialAttack: 2,
+      specialDefend: 4,
       speed: 2
     }
   },
