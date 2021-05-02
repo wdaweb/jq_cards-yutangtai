@@ -3,6 +3,8 @@ let indexNum
 let randomIdNumber = []
 let target1 = ranNum(0, 6)
 let target2 = ranNum(0, 6)
+const axios = require('axios')
+const cheerio = require('cheerio')
 const pokemonInfo = [
   {
     name: '妙蛙種子',
@@ -233,17 +235,113 @@ const pokemonInfo = [
     id: '050',
     imgNum: 5,
     attribution: ['地面'],
-    weakness: ['水', '', ''],
-    detail: '越是能製造出強大電流的皮卡丘，臉頰上的囊就越柔軟，同時也越有伸展性。',
+    weakness: ['水', '草', '冰'],
+    detail: '地鼠經過之後的土壤會得到適當的翻動，成為最適合耕種的田地。',
+    ability: {
+      hp: 1,
+      attack: 4,
+      defend: 2,
+      specialAttack: 3,
+      specialDefend: 3,
+      speed: 6
+    }
+  },
+  {
+    name: '喵喵',
+    id: '052',
+    imgNum: 5,
+    attribution: ['一般'],
+    weakness: ['格鬥'],
+    detail: '喜歡收集亮晶晶的東西。當牠心情好的時候，會讓訓練家一起欣賞自己的收藏。',
     ability: {
       hp: 3,
-      attack: 4,
+      attack: 3,
       defend: 3,
       specialAttack: 3,
       specialDefend: 3,
       speed: 6
     }
-  }
+  },
+  {
+    name: '可達鴨',
+    id: '054',
+    imgNum: 5,
+    attribution: ['水'],
+    weakness: ['草','電'],
+    detail: '一使出念力就會頭痛，所以平常盡量什麼事都不做，整天不停地發呆。',
+    ability: {
+      hp: 2,
+      attack: 3,
+      defend: 2,
+      specialAttack: 3,
+      specialDefend: 2,
+      speed: 3
+    }
+  },
+  {
+    name: '呆呆獸',
+    id: '079',
+    imgNum: 5,
+    attribution: ['水','超能力'],
+    weakness: ['草','電','蟲','幽靈','惡'],
+    detail: '傳說當呆呆獸打呵欠時就會開始下雨，所以據說有些地區會祭祀呆呆獸。',
+    ability: {
+      hp: 6,
+      attack: 4,
+      defend: 4,
+      specialAttack: 3,
+      specialDefend: 3,
+      speed: 1
+    }
+  },
+  {
+    name: '耿鬼',
+    id: '094',
+    imgNum: 5,
+    attribution: ['一般'],
+    weakness: ['格鬥'],
+    detail: '喜歡收集亮晶晶的東西。當牠心情好的時候，會讓訓練家一起欣賞自己的收藏。',
+    ability: {
+      hp: 3,
+      attack: 3,
+      defend: 3,
+      specialAttack: 3,
+      specialDefend: 3,
+      speed: 6
+    }
+  },
+  {
+    name: '喵喵',
+    id: '052',
+    imgNum: 5,
+    attribution: ['一般'],
+    weakness: ['格鬥'],
+    detail: '喜歡收集亮晶晶的東西。當牠心情好的時候，會讓訓練家一起欣賞自己的收藏。',
+    ability: {
+      hp: 3,
+      attack: 3,
+      defend: 3,
+      specialAttack: 3,
+      specialDefend: 3,
+      speed: 6
+    }
+  },
+  {
+    name: '喵喵',
+    id: '052',
+    imgNum: 5,
+    attribution: ['一般'],
+    weakness: ['格鬥'],
+    detail: '喜歡收集亮晶晶的東西。當牠心情好的時候，會讓訓練家一起欣賞自己的收藏。',
+    ability: {
+      hp: 3,
+      attack: 3,
+      defend: 3,
+      specialAttack: 3,
+      specialDefend: 3,
+      speed: 6
+    }
+  },
 ]
 
 // 隨機數字
@@ -362,3 +460,6 @@ function descriptionBox() {
   // $('pokeNum').css
 }
 descriptionBox()
+
+const pokemonId = ["001", "004", "007", "010", "012", "016", "019", "024", "025", "035", "037", "039", "044", "048", "050", "052", "054", "079", "094", "103", "124", "129", "143", "151", "158"]
+axios.get()
