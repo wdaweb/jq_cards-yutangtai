@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>寶可夢</title>
 </head>
@@ -23,7 +25,7 @@
             </div>
             <div id="intro">
                 <div class="intro_box_blur"></div>
-                <div class="close_box">X</div>
+                <div class="close_box" style="font-family: 'Coda Caption', sans-serif;">X</div>
                 <div class="title_box">
                     <h2 class="pokeNum">005</h2>
                     <h2 class="pokeName">小鉅鱷</h2>
@@ -31,15 +33,21 @@
                 <div class="ability_box">
                     <div class="ability_box_blur"></div>
                     <div class="ability_text">
-                        <p>屬性<br><br><span class="attributes"></span></p><br><br>
-                        <p>弱點<br><br><span class="weakness"></span></p>
+                        <p>- 屬性 -<br><br><span class="attributes"></span></p><br><br>
+                        <p>- 弱點 -<br><br><span class="weakness"></span></p>
                     </div>
                 </div>
                 <div class="detail_box">
-                    <p><span class="detail"></span></p>
+                    <div class="detail_box_blur"></div>
+                    <div class="deatail_text">
+                        <p><span class="detail"></span></p>
+                    </div>
                 </div>
                 <div class="chart_box">
-                    <canvas id="pokeChart" width="400" height="400"></canvas>
+                    <div class="chart_box_blur"></div>
+                    <div class="chart_box_text">
+                        <canvas id="pokeChart"></canvas>
+                    </div>
                 </div>
                 <div class="pokemonImg">
                     <img class="circle" src="./images/lazorBall.png">

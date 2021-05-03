@@ -86,6 +86,7 @@ body {
   margin: auto;
   background: rgb(115, 121, 120);
   border-radius: 10px;
+  border: 2px solid rgb(110, 194, 233);
 
   position: absolute;
   top: 50%;
@@ -108,15 +109,17 @@ body {
   z-index: -99;
 }
 #intro .close_box {
-  width: 50px;
-  height: 50px;
-  background: crimson;
+  width: 45px;
+  height: 45px;
+  background: rgba(130, 140, 228, 0.418);
+  border: 2px solid rgb(159, 211, 235);
   border-radius: 6px;
+  box-shadow: 2px 2px 3px #333 inset;
 
   font-size: 20px;
   font-weight: bolder;
   text-align: center;
-  line-height: 50px;
+  line-height: 45px;
 
   position: absolute;
   right: 2%;
@@ -124,24 +127,34 @@ body {
 }
 #intro .close_box:hover {
   background: cornflowerblue;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px #333 inset;
   cursor: pointer;
 }
 #intro .title_box {
   width: 200px;
   height: 150px;
-  background: orangered;
+
   border-radius: 10px;
   text-align: center;
 
   position: absolute;
-  top: -10%;
+  top: -13%;
   left: 50%;
   transform: translateX(-50%);
 }
 #intro h2 {
   color: white;
-  font-size: 52px;
-  line-height: 75px;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 55px;
+
+  text-shadow: 1px 2px 2px rgb(61, 61, 221), 2px 3px 10px white;
+}
+#intro .pokeNum {
+  font-size: 28px;
+  font-family: "Rajdhani", sans-serif;
+  color: rgb(110, 194, 233);
 }
 #intro .ability_box {
   width: 210px;
@@ -159,7 +172,7 @@ body {
   width: 210px;
   height: 290px;
   filter: blur(10px);
-  background: rgb(11, 43, 104);
+  background: rgb(22, 35, 67);
   border-radius: 10px;
 
   position: absolute;
@@ -167,9 +180,11 @@ body {
 }
 #intro .ability_text {
   display: inline-block;
-  width: 160px;
-  height: 240px;
+  width: 150px;
+  height: 230px;
   padding: 30px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.582);
 
   z-index: 99;
 }
@@ -191,18 +206,60 @@ body {
   position: absolute;
   top: 85%;
   left: -10%;
+  z-index: -98;
+}
+#intro .detail_box_blur {
+  display: inline-block;
+  width: 400px;
+  height: 200px;
+  filter: blur(10px);
+  background: rgb(22, 35, 67);
+  border-radius: 10px;
+
+  position: absolute;
+  z-index: -97;
+}
+#intro .deatail_text {
+  display: inline-block;
+  width: 340px;
+  height: 140px;
+  line-height: 2;
+  padding: 40px 30px 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.582);
+}
+#intro .deatail_text p {
+  font-size: 20px;
 }
 #intro .chart_box {
-  width: 490px;
-  height: 190px;
-  background: darkgreen;
+  width: 510px;
+  height: 240px;
+  background: rgb(165, 167, 165);
   border-radius: 10px;
-  padding-top: 10px;
-  padding-left: 10px;
 
   position: absolute;
   top: 85%;
   left: 55%;
+  z-index: -98;
+}
+#intro .chart_box_blur {
+  display: inline-block;
+  width: 510px;
+  height: 240px;
+  filter: blur(10px);
+  background: rgb(22, 35, 67);
+  border-radius: 10px;
+
+  position: absolute;
+  z-index: -97;
+}
+#intro .chart_box_text {
+  display: inline-block;
+  width: 470px;
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.582);
+  padding: 20px;
 }
 #intro p {
   color: white;
@@ -211,7 +268,6 @@ body {
 #intro .pokemonImg {
   width: 70%;
   height: 70%;
-  /* background: darkmagenta; */
 
   margin: auto;
   text-align: center;

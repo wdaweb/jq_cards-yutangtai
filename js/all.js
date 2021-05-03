@@ -38,7 +38,7 @@ const pokemonInfo = [
     id: '025',
     attribution: ['電'],
     weakness: ['地面'],
-    detail: '越是能製造出強大電流的皮卡丘，臉頰上的囊就越柔軟，同時也越有伸展性。',
+    detail: '　　越是能製造出強大電流的皮卡丘，臉頰上的囊就越柔軟，同時也越有伸展性。',
     ability: {
       hp: 3,
       attack: 4,
@@ -54,7 +54,7 @@ const pokemonInfo = [
     id: '004',
     attribution: ['火'],
     weakness: ['水', '地面', '岩石'],
-    detail: '天生喜歡熱熱的東西。據說當牠被雨淋濕的時候，尾巴的末端會冒出煙來。',
+    detail: '　　天生喜歡熱熱的東西。據說當牠被雨淋濕的時候，尾巴的末端會冒出煙來。',
     ability: {
       hp: 3,
       attack: 4,
@@ -70,7 +70,7 @@ const pokemonInfo = [
     id: '007',
     attribution: ['水'],
     weakness: ['草', '電'],
-    detail: '甲殼的作用不僅是用來保護自己，圓潤的外形和表面的溝槽會減少水的阻力，使牠能夠快速地游泳。',
+    detail: '　　甲殼的作用不僅是用來保護自己，圓潤的外形和表面的溝槽會減少水的阻力，使牠能夠快速地游泳。',
     ability: {
       hp: 3,
       attack: 3,
@@ -86,7 +86,7 @@ const pokemonInfo = [
     id: '010',
     attribution: ['蟲'],
     weakness: ['火', '飛行', '岩石'],
-    detail: '會從頭部的觸角釋放出強烈的氣味來趕走敵人，藉此保護自己。',
+    detail: '　　會從頭部的觸角釋放出強烈的氣味來趕走敵人，藉此保護自己。',
     ability: {
       hp: 3,
       attack: 2,
@@ -102,7 +102,7 @@ const pokemonInfo = [
     id: '012',
     attribution: ['蟲', '飛行'],
     weakness: ['火', '飛行', '岩石', '電', '冰'],
-    detail: '當牠飛快地拍動翅膀，帶有劇毒的鱗粉就會隨著風向這裡飄過來。',
+    detail: '　　當牠飛快地拍動翅膀，帶有劇毒的鱗粉就會隨著風向這裡飄過來。',
     ability: {
       hp: 4,
       attack: 3,
@@ -118,7 +118,7 @@ const pokemonInfo = [
     id: '001',
     attribution: ['草', '毒'],
     weakness: ['火', '冰', '飛行', '超能力'],
-    detail: '經常可見牠在太陽下睡午覺的樣子。在沐浴了充足的陽光之後，牠背上的種子就會成長茁壯。',
+    detail: '　　經常可見牠在太陽下睡午覺的樣子。在沐浴了充足的陽光之後，牠背上的種子就會成長茁壯。',
     ability: {
       hp: 3,
       attack: 3,
@@ -134,7 +134,7 @@ const pokemonInfo = [
     id: '016',
     attribution: ['一般', '飛行'],
     weakness: ['岩石', '電', '冰'],
-    detail: '因為方向感非常好，所以無論到了離巢穴多遠的地方，都能不迷路地飛回巢穴。',
+    detail: '　　因為方向感非常好，所以無論到了離巢穴多遠的地方，都能不迷路地飛回巢穴。',
     ability: {
       hp: 2,
       attack: 2,
@@ -150,7 +150,7 @@ const pokemonInfo = [
     id: '019',
     attribution: ['一般'],
     weakness: ['格鬥'],
-    detail: '門牙會終生生長，如果長得太長，就會因為無法進食而餓死。',
+    detail: '　　門牙會終生生長，如果長得太長，就會因為無法進食而餓死。',
     ability: {
       hp: 2,
       attack: 3,
@@ -166,7 +166,7 @@ const pokemonInfo = [
     id: '024',
     attribution: ['毒'],
     weakness: ['地面', '超能力'],
-    detail: '最新的研究結果顯示，牠們肚子上的花紋有２０種以上的不同圖案。',
+    detail: '　　最新的研究結果顯示，牠們肚子上的花紋有２０種以上的不同圖案。',
     ability: {
       hp: 3,
       attack: 5,
@@ -182,7 +182,7 @@ const pokemonInfo = [
     id: '035',
     attribution: ['妖精'],
     weakness: ['毒', '鋼'],
-    detail: '據說如果在滿月的夜晚看見皮皮們聚在一起跳舞，就能得到幸福。',
+    detail: '　　據說如果在滿月的夜晚看見皮皮們聚在一起跳舞，就能得到幸福。',
     ability: {
       hp: 5,
       attack: 3,
@@ -198,7 +198,7 @@ const pokemonInfo = [
     id: '039',
     attribution: ['一般', '妖精'],
     weakness: ['毒', '鋼'],
-    detail: '在百貨公司的寢具區可以買到收錄著胖丁那奇妙搖籃曲的ＣＤ。',
+    detail: '　　在百貨公司的寢具區可以買到收錄著胖丁那奇妙搖籃曲的ＣＤ。',
     ability: {
       hp: 5,
       attack: 2,
@@ -214,7 +214,7 @@ const pokemonInfo = [
     id: '037',
     attribution: ['火'],
     weakness: ['地面', '水', '岩石'],
-    detail: '雖然還是孩子，但已擁有美麗的６根尾巴。長大後尾巴會變得更多。',
+    detail: '　　雖然還是孩子，但已擁有美麗的６根尾巴。長大後尾巴會變得更多。',
     ability: {
       hp: 3,
       attack: 3,
@@ -230,7 +230,7 @@ const pokemonInfo = [
     id: '044',
     attribution: ['草', '毒'],
     weakness: ['火', '冰', '飛行', '超能力'],
-    detail: '雌蕊會散發一種極其強烈的惡臭，能讓２公里外的人昏倒。',
+    detail: '　　雌蕊會散發一種極其強烈的惡臭，能讓２公里外的人昏倒。',
     ability: {
       hp: 4,
       attack: 4,
@@ -246,7 +246,7 @@ const pokemonInfo = [
     id: '048',
     attribution: ['蟲', '毒'],
     weakness: ['火', '飛行', '超能力', '岩石'],
-    detail: '據說為了保護自己，變得全身長滿了堅硬細小的體毛。有著不會放過任何小獵物的眼睛。',
+    detail: '　　據說為了保護自己，變得全身長滿了堅硬細小的體毛。有著不會放過任何小獵物的眼睛。',
     ability: {
       hp: 3,
       attack: 3,
@@ -262,7 +262,7 @@ const pokemonInfo = [
     id: '050',
     attribution: ['地面'],
     weakness: ['水', '草', '冰'],
-    detail: '地鼠經過之後的土壤會得到適當的翻動，成為最適合耕種的田地。',
+    detail: '　　地鼠經過之後的土壤會得到適當的翻動，成為最適合耕種的田地。',
     ability: {
       hp: 1,
       attack: 4,
@@ -278,7 +278,7 @@ const pokemonInfo = [
     id: '052',
     attribution: ['一般'],
     weakness: ['格鬥'],
-    detail: '喜歡收集亮晶晶的東西。當牠心情好的時候，會讓訓練家一起欣賞自己的收藏。',
+    detail: '　　喜歡收集亮晶晶的東西。當牠心情好的時候，會讓訓練家一起欣賞自己的收藏。',
     ability: {
       hp: 3,
       attack: 3,
@@ -294,7 +294,7 @@ const pokemonInfo = [
     id: '054',
     attribution: ['水'],
     weakness: ['草', '電'],
-    detail: '一使出念力就會頭痛，所以平常盡量什麼事都不做，整天不停地發呆。',
+    detail: '　　一使出念力就會頭痛，所以平常盡量什麼事都不做，整天不停地發呆。',
     ability: {
       hp: 2,
       attack: 3,
@@ -310,7 +310,7 @@ const pokemonInfo = [
     id: '079',
     attribution: ['水', '超能力'],
     weakness: ['草', '電', '蟲', '幽靈', '惡'],
-    detail: '傳說當呆呆獸打呵欠時就會開始下雨，所以據說有些地區會祭祀呆呆獸。',
+    detail: '　　傳說當呆呆獸打呵欠時就會開始下雨，所以據說有些地區會祭祀呆呆獸。',
     ability: {
       hp: 6,
       attack: 4,
@@ -326,7 +326,7 @@ const pokemonInfo = [
     id: '094',
     attribution: ['幽靈', '毒'],
     weakness: ['地面', '超能力', '幽靈', '惡'],
-    detail: '滿月的夜晚，如果影子自己動起來並露出笑容，那肯定是耿鬼搞的鬼。',
+    detail: '　　滿月的夜晚，如果影子自己動起來並露出笑容，那肯定是耿鬼搞的鬼。',
     ability: {
       hp: 4,
       attack: 4,
@@ -342,7 +342,7 @@ const pokemonInfo = [
     id: '103',
     attribution: ['草', '超能力'],
     weakness: ['火', '冰', '毒', '飛行', '蟲', '幽靈', '惡'],
-    detail: '會用精神力量迎戰敵人。３個頭會分別發出念力，所以威力也會變成３倍。',
+    detail: '　　會用精神力量迎戰敵人。３個頭會分別發出念力，所以威力也會變成３倍。',
     ability: {
       hp: 4,
       attack: 5,
@@ -358,7 +358,7 @@ const pokemonInfo = [
     id: '129',
     attribution: ['水'],
     weakness: ['草', '電'],
-    detail: '力量和速度都不太行。是世界上最弱最可憐的寶可夢。',
+    detail: '　　力量和速度都不太行。是世界上最弱最可憐的寶可夢。',
     ability: {
       hp: 2,
       attack: 1,
@@ -374,7 +374,7 @@ const pokemonInfo = [
     id: '124',
     attribution: ['冰', '超能力'],
     weakness: ['火', '蟲', '岩石', '幽靈', '惡', '鋼'],
-    detail: '會以獨特的節奏扭動腰部。棲息在阿羅拉的迷唇姐動作更是特別完美無瑕。',
+    detail: '　　會以獨特的節奏扭動腰部。棲息在阿羅拉的迷唇姐動作更是特別完美無瑕。',
     ability: {
       hp: 3,
       attack: 3,
@@ -390,7 +390,7 @@ const pokemonInfo = [
     id: '143',
     attribution: ['一般'],
     weakness: ['格鬥'],
-    detail: '每天不吃下４００公斤的食物絕不會善罷甘休。吃飽了就會開始睡覺。',
+    detail: '　　每天不吃下４００公斤的食物絕不會善罷甘休。吃飽了就會開始睡覺。',
     ability: {
       hp: 10,
       attack: 7,
@@ -406,7 +406,7 @@ const pokemonInfo = [
     id: '151',
     attribution: ['超能力'],
     weakness: ['蟲', '幽靈', '惡'],
-    detail: '據說牠有著所有寶可夢的基因。因為可以隨心所欲地隱形，所以就算接近人類也完全不會被察覺。',
+    detail: '　　據說牠有著所有寶可夢的基因。因為可以隨心所欲地隱形，所以就算接近人類也完全不會被察覺。',
     ability: {
       hp: 6,
       attack: 6,
@@ -422,7 +422,7 @@ const pokemonInfo = [
     imgNum: 25,
     attribution: ['超能力'],
     weakness: ['蟲', '幽靈', '惡'],
-    detail: '討厭光和衝擊。受到攻擊時身體會膨脹，反擊也會因此變強。',
+    detail: '　　討厭光和衝擊。受到攻擊時身體會膨脹，反擊也會因此變強。',
     ability: {
       hp: 12,
       attack: 2,
@@ -438,7 +438,7 @@ const pokemonInfo = [
     imgNum: 26,
     attribution: ['水'],
     weakness: ['草', '電'],
-    detail: '個子雖小但雙顎力量很強。力量強大到小鋸鱷只是想輕輕咬一下，但卻會讓對方受到重傷的程度。',
+    detail: '　　個子雖小但雙顎力量很強。力量強大到小鋸鱷只是想輕輕咬一下，但卻會讓對方受到重傷的程度。',
     ability: {
       hp: 2,
       attack: 3,
@@ -607,9 +607,6 @@ function abilityChart() {
       datasets: [
         {
           label: '能力',
-          backgroundColor: ['rgba(255, 255, 230, 0.5)', 'rgba(255, 230, 255, 0.5)', 'rgba(230, 255, 255, 0.5)'],
-          borderColor: ['rgba(0, 0, 0, 0.5)'],
-          borderWidth: 1,
           data: [
             `${pokemonInfo[pokeIndex].ability.hp}`,
             `${pokemonInfo[pokeIndex].ability.attack}`,
@@ -617,14 +614,17 @@ function abilityChart() {
             `${pokemonInfo[pokeIndex].ability.specialAttack}`,
             `${pokemonInfo[pokeIndex].ability.specialDefend}`,
             `${pokemonInfo[pokeIndex].ability.speed}`
-          ]
+          ],
+          backgroundColor: ['rgba(74, 187, 253, 0.95)','rgba(74, 187, 253, 0.95)','rgba(74, 187, 253, 0.95)','rgba(74, 187, 253, 0.95)','rgba(74, 187, 253, 0.95)','rgba(74, 187, 253, 0.95)'],
+          borderColor: ['rgba(255, 255, 255, 0.3)'],
+          borderWidth: 2,
         }
       ]
     },
     options: {
       elements: {
         line: {
-          borderWidth: 10
+          borderWidth: 5
         }
       }
     }
