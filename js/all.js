@@ -1,14 +1,36 @@
-
 let cardIdNumber = []
 let indexNum
 let randomIdNumber = []
 let target1 = ranNum(0, 6)
 let target2 = ranNum(0, 6)
-const pokemonId = ["001", "004", "007", "010", "012", "016", "019", "024", "025", "035", "037", "039", "044", "048", "050", "052", "054", "079", "094", "103", "124", "129", "143", "151", "158", "202"]
-
-// const { Chart } = require("chart.js")
-// const axios = import('axios')
-// const cheerio = import('cheerio')
+const pokemonId = [
+  '001',
+  '004',
+  '007',
+  '010',
+  '012',
+  '016',
+  '019',
+  '024',
+  '025',
+  '035',
+  '037',
+  '039',
+  '044',
+  '048',
+  '050',
+  '052',
+  '054',
+  '079',
+  '094',
+  '103',
+  '124',
+  '129',
+  '143',
+  '151',
+  '158',
+  '202'
+]
 const pokemonInfo = [
   {
     imgNum: 1,
@@ -271,7 +293,7 @@ const pokemonInfo = [
     name: '可達鴨',
     id: '054',
     attribution: ['水'],
-    weakness: ['草','電'],
+    weakness: ['草', '電'],
     detail: '一使出念力就會頭痛，所以平常盡量什麼事都不做，整天不停地發呆。',
     ability: {
       hp: 2,
@@ -286,8 +308,8 @@ const pokemonInfo = [
     imgNum: 18,
     name: '呆呆獸',
     id: '079',
-    attribution: ['水','超能力'],
-    weakness: ['草','電','蟲','幽靈','惡'],
+    attribution: ['水', '超能力'],
+    weakness: ['草', '電', '蟲', '幽靈', '惡'],
     detail: '傳說當呆呆獸打呵欠時就會開始下雨，所以據說有些地區會祭祀呆呆獸。',
     ability: {
       hp: 6,
@@ -302,8 +324,8 @@ const pokemonInfo = [
     imgNum: 19,
     name: '耿鬼',
     id: '094',
-    attribution: ['幽靈','毒'],
-    weakness: ['地面','超能力','幽靈','惡'],
+    attribution: ['幽靈', '毒'],
+    weakness: ['地面', '超能力', '幽靈', '惡'],
     detail: '滿月的夜晚，如果影子自己動起來並露出笑容，那肯定是耿鬼搞的鬼。',
     ability: {
       hp: 4,
@@ -318,7 +340,7 @@ const pokemonInfo = [
     imgNum: 20,
     name: '椰蛋樹',
     id: '103',
-    attribution: ['草','超能力'],
+    attribution: ['草', '超能力'],
     weakness: ['火', '冰', '毒', '飛行', '蟲', '幽靈', '惡'],
     detail: '會用精神力量迎戰敵人。３個頭會分別發出念力，所以威力也會變成３倍。',
     ability: {
@@ -335,7 +357,7 @@ const pokemonInfo = [
     name: '鯉魚王',
     id: '129',
     attribution: ['水'],
-    weakness: ['草','電'],
+    weakness: ['草', '電'],
     detail: '力量和速度都不太行。是世界上最弱最可憐的寶可夢。',
     ability: {
       hp: 2,
@@ -350,8 +372,8 @@ const pokemonInfo = [
     imgNum: 22,
     name: '迷唇姐',
     id: '124',
-    attribution: ['冰','超能力'],
-    weakness: ['火','蟲','岩石','幽靈','惡','鋼'],
+    attribution: ['冰', '超能力'],
+    weakness: ['火', '蟲', '岩石', '幽靈', '惡', '鋼'],
     detail: '會以獨特的節奏扭動腰部。棲息在阿羅拉的迷唇姐動作更是特別完美無瑕。',
     ability: {
       hp: 3,
@@ -399,7 +421,7 @@ const pokemonInfo = [
     id: '202',
     imgNum: 25,
     attribution: ['超能力'],
-    weakness: ['蟲','幽靈', '惡'],
+    weakness: ['蟲', '幽靈', '惡'],
     detail: '討厭光和衝擊。受到攻擊時身體會膨脹，反擊也會因此變強。',
     ability: {
       hp: 12,
@@ -415,7 +437,7 @@ const pokemonInfo = [
     id: '158',
     imgNum: 26,
     attribution: ['水'],
-    weakness: ['草','電'],
+    weakness: ['草', '電'],
     detail: '個子雖小但雙顎力量很強。力量強大到小鋸鱷只是想輕輕咬一下，但卻會讓對方受到重傷的程度。',
     ability: {
       hp: 2,
@@ -546,62 +568,58 @@ function descriptionBox() {
   // $('#intro').addClass('animate__animated animate__fadeInDownBig')
 }
 
-function findPokeIndex(){
+function findPokeIndex() {
   let pokeIndex = $('.card-open').eq(0).attr('left-card') - 1
-  let attributesStr = ""
-  let weaknessStr = ""
+  let attributesStr = ''
+  let weaknessStr = ''
   $('.pokeNum').text(pokemonInfo[pokeIndex]['id'])
   $('.pokeName').text(pokemonInfo[pokeIndex].name)
   $('.detail').text(pokemonInfo[pokeIndex].detail)
-  $('.pokemon').attr('src', `/images/${pokeIndex + 1}_info.png`)
+  $('.pokemon').attr('src', `./images/${pokeIndex + 1}_info.png`)
   abilityChart()
-  for(let i=0; i<pokemonInfo[pokeIndex].attribution.length; i++){
+  for (let i = 0; i < pokemonInfo[pokeIndex].attribution.length; i++) {
     attributesStr += `${pokemonInfo[pokeIndex].attribution[i]}\n`
     $('.attributes').text(attributesStr)
   }
-  for(let i=0; i<pokemonInfo[pokeIndex].weakness.length; i++){
+  for (let i = 0; i < pokemonInfo[pokeIndex].weakness.length; i++) {
     weaknessStr += `${pokemonInfo[pokeIndex].weakness[i]}\n`
     $('.weakness').text(weaknessStr)
-  }  
+  }
 }
 
 // 關掉介紹視窗
-function closeIntroBox(){
-  $('.close_box').click(function(){
+function closeIntroBox() {
+  $('.close_box').click(function () {
     $('#intro').css('display', 'none')
-    pokeChart.destroy();
+    pokeChart.destroy()
   })
 }
 closeIntroBox()
 
 let pokeChart
-function abilityChart(){
+function abilityChart() {
   let pokeIndex = $('.card-open').eq(0).attr('left-card') - 1
   let ctx = $('#pokeChart')
-  pokeChart = new Chart(ctx,{
+  pokeChart = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: ['HP', '攻擊', '防禦', '特攻', '特防', '速度'],
-      datasets: [{
-        label: '能力',
-        backgroundColor: [
-          'rgba(255, 255, 230, 0.5)',
-          'rgba(255, 230, 255, 0.5)',
-          'rgba(230, 255, 255, 0.5)'
-        ],
-        borderColor: [
-          'rgba(0, 0, 0, 0.5)'
-        ],
-        borderWidth: 1,
-        data: [
-          `${pokemonInfo[pokeIndex].ability.hp}`,
-          `${pokemonInfo[pokeIndex].ability.attack}`,
-          `${pokemonInfo[pokeIndex].ability.defend}`,
-          `${pokemonInfo[pokeIndex].ability.specialAttack}`,
-          `${pokemonInfo[pokeIndex].ability.specialDefend}`,
-          `${pokemonInfo[pokeIndex].ability.speed}`
-        ]
-      }]
+      datasets: [
+        {
+          label: '能力',
+          backgroundColor: ['rgba(255, 255, 230, 0.5)', 'rgba(255, 230, 255, 0.5)', 'rgba(230, 255, 255, 0.5)'],
+          borderColor: ['rgba(0, 0, 0, 0.5)'],
+          borderWidth: 1,
+          data: [
+            `${pokemonInfo[pokeIndex].ability.hp}`,
+            `${pokemonInfo[pokeIndex].ability.attack}`,
+            `${pokemonInfo[pokeIndex].ability.defend}`,
+            `${pokemonInfo[pokeIndex].ability.specialAttack}`,
+            `${pokemonInfo[pokeIndex].ability.specialDefend}`,
+            `${pokemonInfo[pokeIndex].ability.speed}`
+          ]
+        }
+      ]
     },
     options: {
       elements: {
@@ -612,5 +630,3 @@ function abilityChart(){
     }
   })
 }
-
-// axios.get()

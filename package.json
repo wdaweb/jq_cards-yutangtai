@@ -1,5 +1,5 @@
 {
-  "type": "module",
+  "type": "commonjs",
   "name": "jq_cards-yutangtai",
   "version": "1.0.0",
   "description": "發揮創意美化你上課完成的小遊戲，並試著加入更多功能",
