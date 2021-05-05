@@ -565,7 +565,7 @@ function addBall() {
 // 神奇寶貝介紹
 function descriptionBox() {
   $('#intro').css('display', 'block')
-  // $('#intro').addClass('animate__animated animate__fadeInDownBig')
+  $('#intro').addClass('animate__animated animate__fadeInDownBig')
 }
 
 function findPokeIndex() {
@@ -575,7 +575,7 @@ function findPokeIndex() {
   $('.pokeNum').text(pokemonInfo[pokeIndex]['id'])
   $('.pokeName').text(pokemonInfo[pokeIndex].name)
   $('.detail').text(pokemonInfo[pokeIndex].detail)
-  $('.pokemon').attr('src', `./images/${pokeIndex + 1}_info.png`)
+  $('.pokemon').attr('src', `../images/${pokeIndex + 1}_info.png`)
   abilityChart()
   for (let i = 0; i < pokemonInfo[pokeIndex].attribution.length; i++) {
     attributesStr += `${pokemonInfo[pokeIndex].attribution[i]}\n`
