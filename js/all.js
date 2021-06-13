@@ -3,6 +3,8 @@ let indexNum
 let randomIdNumber = []
 let target1 = ranNum(0, 6)
 let target2 = ranNum(0, 6)
+let frontMusic = new Audio('../audio/guessPokemon_front.mp3')
+let endaMusic = new Audio('../audio/guessPokemon_end.mp3')
 const pokemonId = [
   '001',
   '004',
@@ -450,6 +452,14 @@ const pokemonInfo = [
   }
 ]
 
+// 遊戲起始畫面，按下開始按鈕
+$('#btn').click(function(){
+  $('#gameStart').css("display","none");
+  $('#game').css("display","block");
+  displayCard();
+  frontMusic.play();
+})
+
 // 隨機數字
 function ranNum(min, max) {
   return Math.round(Math.random() * (max - min)) + min
@@ -457,22 +467,32 @@ function ranNum(min, max) {
 
 // 建立一個有 26 個值的陣列 cardIdNumber
 for (let i = 1; i <= 26; i++) {
-  cardIdNumber.push(i) //總共 26 個數字
+  cardIdNumber.push(i); //總共 26 個數字
 }
 
-// 從 cardIdNumber 內隨機取 6 個值成立新的陣列 randomIdNumber
-for (let i = 1; i <= 6; i++) {
-  indexNum = ranNum(1, 25)
-  if (randomIdNumber.indexOf(indexNum) === -1) {
-    randomIdNumber.push(indexNum)
-  } else {
-    i--
+// 重新抽牌
+function newCards(){
+  console.log('(1) newCards 重新抽牌');
+  randomIdNumber = [];  
+  
+  // 從 cardIdNumber 內隨機取 6 個值成立新的陣列 randomIdNumber
+  for (let i = 1; i <= 6; i++) {
+    indexNum = ranNum(1, 25);
+    if (randomIdNumber.indexOf(indexNum) === -1) {
+      randomIdNumber.push(indexNum);
+    } else {
+      i--;
+    }
   }
+  console.log('(2) randomIdNumber:' + randomIdNumber);
+  return randomIdNumber;
 }
 
 function displayCard() {
-  target1 = ranNum(0, 6)
-  target2 = ranNum(0, 6)
+  newCards()
+  console.log('(3) displayCard 發牌');
+  target1 = ranNum(0, 6);
+  target2 = ranNum(0, 6);
   if (target1 === target2) {
     target1 = ranNum(0, 6) //解決 target1 target2 重複的問題
   }
@@ -507,49 +527,40 @@ function displayCard() {
     $('.face').eq(target1).insertBefore($('.face').eq(i))
   }
 }
-displayCard()
 
 // 檢查
 function addCardOpen() {
   $('#left').on('click', '.shadow', function () {
     if ($('#left .card-open').length === 0 && !$(this).hasClass('.card-open')) {
-      $(this).addClass('card-open')
+      $(this).addClass('card-open');
     }
     checkCard()
   })
   $('#right').on('click', '.face', function () {
     if ($('#right .card-open').length === 0 && !$(this).hasClass('.card-open')) {
-      $(this).addClass('card-open')
+      $(this).addClass('card-open');
     }
     checkCard()
   })
 }
 addCardOpen()
 
+let matchNum = 0
 function checkCard() {
   if ($('#left .card-open').length + $('#right .card-open').length === 2) {
     if ($('.card-open').eq(0).attr('left-card') === $('.card-open').eq(1).attr('right-card')) {
+      matchNum++
       setTimeout(() => {
         $('.card-open').fadeTo(1000, 0).addClass('card-clear')
         findPokeIndex()
         descriptionBox()
+        finalResult()
       }, 1000)
-      addBall()
+      addBall();
     }
     setTimeout(() => {
       $('.card-open').removeClass('card-open')
     }, 1000)
-  }
-  if ($('.pokeball').length === 6) {
-    setTimeout(() => {
-      // Swal.fire({
-      //   title: '恭喜成為神奇寶貝大師!!!'
-      // })
-      $('#left').empty()
-      $('#right').empty()
-      $('.ball').empty()
-      displayCard()
-    }, 2000)
   }
 }
 
@@ -564,8 +575,9 @@ function addBall() {
 
 // 神奇寶貝介紹
 function descriptionBox() {
-  $('#intro').css('display', 'block')
-  $('#intro').addClass('animate__animated animate__fadeInDownBig')
+  $('#intro').css('display', 'block');
+  $('#intro').addClass('animate__animated animate__fadeInDownBig');
+  endaMusic.play();
 }
 
 function findPokeIndex() {
@@ -588,13 +600,29 @@ function findPokeIndex() {
 }
 
 // 關掉介紹視窗
-function closeIntroBox() {
-  $('.close_box').click(function () {
-    $('#intro').css('display', 'none')
-    pokeChart.destroy()
-  })
-}
-closeIntroBox()
+$('.close_box').click(function () {
+  $('#intro').css('display', 'none');
+  pokeChart.destroy();
+
+  if (matchNum === 6) {
+    // 清空牌組，顯示最終結果視窗
+    $('#left').empty();
+    $('#right').empty();
+    $('.ball').empty();    
+    console.log('(4) 全部重置------------>');
+    matchNum = 0;
+    $('#pokemonResult').css("display","block");
+    $('#game').css("display","none");      
+  }
+})
+
+// 關掉最終結果視窗
+$('.closeBox').click(function(){
+  $('.ballResult').empty();
+  displayCard();      
+  $('#pokemonResult').css("display","none");
+  $('#game').css("display","block");
+})
 
 let pokeChart
 function abilityChart() {
@@ -630,3 +658,20 @@ function abilityChart() {
     }
   })
 }
+
+
+// 最後顯示配對成功的的神奇寶貝
+function finalResult(){
+  console.log(matchNum);
+  let pokeIndex = $('.card-open').eq(0).attr('left-card') - 1;
+  $('.ballResult').append(`
+    <div class="bgBallImg">
+      <div class="bgBallImgInfo">
+        <div class="catchPokemon"></div>
+        <div class="catchPokemonName"></div>
+      </div>
+    </div>`);
+    $('.ballResult .catchPokemon').eq(matchNum-1).css("background-image",`url(./images/${pokeIndex + 1}_info.png)`);
+    $('.ballResult .catchPokemonName').eq(matchNum-1).text(pokemonInfo[pokeIndex].name);
+}
+
